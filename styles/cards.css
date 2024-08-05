@@ -1,0 +1,39 @@
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 300 to 900
+
+ */
+
+.cardsContainer {
+  background-color: #fefaef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+}
+
+.card-left {
+  background-color: #27355c;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-Cards-Title {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rubik-Questions {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
