@@ -11,6 +11,10 @@
   min-height: 100vh;
 }
 
+.quiz-card{
+    width: 30rem;
+}
+
 .card {
   display: flex;
   flex-direction: row;
