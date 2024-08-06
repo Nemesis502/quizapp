@@ -22,6 +22,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Bootstrap file end -->
+    <script src="./scripts/db.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="./styles/adds.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>QuizApp</title>
   </head>
-  <body>
+  <body onload="render()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">QuizApp</span>
@@ -42,25 +43,25 @@
           <img src="adds/img/logo 2.png" class="card-img-top" alt="..." />
         </div>
         <div class="card-body">
-          <h5 class="card-title rubik-Cards-Title">Frage</h5>
+          <h5 class="card-title rubik-Cards-Title" id="questionText">Frage</h5>
 
           <div class="card mb-2">
-            <div class="card-body rubik-Questions">Antwort</div>
+            <div class="card-body rubik-Questions" id="answer_1">Antwort</div>
           </div>
           <div class="card mb-2">
-            <div class="card-body rubik-Questions">Antwort</div>
-          </div>
-
-          <div class="card mb-2">
-            <div class="card-body rubik-Questions">Antwort</div>
+            <div class="card-body rubik-Questions" id="answer_2">Antwort</div>
           </div>
 
           <div class="card mb-2">
-            <div class="card-body rubik-Questions">Antwort</div>
+            <div class="card-body rubik-Questions" id="answer_3">Antwort</div>
+          </div>
+
+          <div class="card mb-2">
+            <div class="card-body rubik-Questions" id="answer_4">Antwort</div>
           </div>
 
           <div class="question-Footer">
-            <span> <b>1</b> von <b>5</b> Fragen </span>
+            <span> <b>1</b> von <b id="lengthQuestions"></b> Fragen </span>
             <button class="btn btn-primary">Nächste Frage</button>
           </div>
         </div>
