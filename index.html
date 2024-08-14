@@ -45,7 +45,7 @@
         <div class="card-body">
           <h5 class="card-title rubik-Cards-Title" id="questionText"></h5>
 
-          <div id="button${}" class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+          <div id="button" class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
             <div class="card-body rubik-Questions" id="answer_1">Antwort</div>
           </div>
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
@@ -62,7 +62,7 @@
 
           <div class="question-Footer">
             <span> <b>1</b> von <b id="lengthQuestions"></b> Fragen </span>
-            <button class="btn btn-primary">Nächste Frage</button>
+            <button id="next-button" class="btn btn-primary" disabled>Nächste Frage</button>
           </div>
         </div>
       </div>

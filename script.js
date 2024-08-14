@@ -26,11 +26,18 @@ function answer(selcction) {
   // console.log(selectedQuestionNumber);
   // console.log(question["right_answer"]);
 
-  if (selectedQuestionNumber == question["right_answer"]) { //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
+  let idOfRightAnswer = `answer_${question["right_answer"]}`;
+  document.getElementById("next-button").disabled = false;
+
+  if (selectedQuestionNumber == question["right_answer"]) {
+    //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
     // console.log("Richtige Antwort!");
     document.getElementById(selcction).parentNode.classList.add("bg-success");
   } else {
     // console.log("Falsche Antwort");
     document.getElementById(selcction).parentNode.classList.add("bg-danger");
+    document
+      .getElementById(idOfRightAnswer)
+      .parentNode.classList.add("bg-success");
   }
 }
