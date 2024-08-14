@@ -19,6 +19,18 @@ function showQuestion() {
   document.getElementById("answer_4").innerHTML = question["answer_4"];
 }
 
-function answer(selcction){
+function answer(selcction) {
+  let question = questions[currentQuestion]; // weiß damit welche Frage ansteht
+  // console.log(selcction);
+  let selectedQuestionNumber = selcction.slice(-1); // entfernt den letzten Buschstaben aus z.b. "answer_2, in dem Fall die 2". Je nachdem welche Antwort angeklickt wird.
+  // console.log(selectedQuestionNumber);
+  // console.log(question["right_answer"]);
 
+  if (selectedQuestionNumber == question["right_answer"]) { //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
+    // console.log("Richtige Antwort!");
+    document.getElementById(selcction).parentNode.classList.add("bg-success");
+  } else {
+    // console.log("Falsche Antwort");
+    document.getElementById(selcction).parentNode.classList.add("bg-danger");
+  }
 }

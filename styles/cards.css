@@ -11,8 +11,8 @@
   min-height: 100vh;
 }
 
-.quiz-card{
-    width: 30rem;
+.quiz-card {
+  width: 30rem;
 }
 
 .card {
@@ -42,7 +42,12 @@
   font-style: normal;
 }
 
-.quiz-answer-card:hover{
+.quiz-answer-card:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-success,
+.bg-danger {
+  color: white;
 }
