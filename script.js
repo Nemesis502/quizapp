@@ -8,6 +8,8 @@ function render() {
 function showCurrentQuestionLength() {
   let lengthQuestions = document.getElementById("lengthQuestions");
   lengthQuestions.innerHTML = questions.length;
+  let showCurrentQuestions = document.getElementById("showCurrentQuestions");
+  showCurrentQuestions.innerHTML = questions[currentQuestion].length;
 }
 
 function showQuestion() {
@@ -40,4 +42,22 @@ function answer(selcction) {
       .getElementById(idOfRightAnswer)
       .parentNode.classList.add("bg-success");
   }
+}
+
+function nextQuestion() {
+  currentQuestion++; // z.b. von 0 auf 1
+  document.getElementById("next-button").disabled = true;
+  showQuestion();
+  resetAnswerButton();
+}
+
+function resetAnswerButton() {
+  document.getElementById("answer_1").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer_1").parentNode.classList.remove("bg-success");
+  document.getElementById("answer_2").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer_2").parentNode.classList.remove("bg-success");
+  document.getElementById("answer_3").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer_3").parentNode.classList.remove("bg-success");
+  document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer_4").parentNode.classList.remove("bg-success");
 }
