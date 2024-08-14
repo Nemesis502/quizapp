@@ -8,12 +8,11 @@ function render() {
 function showCurrentQuestionLength() {
   let lengthQuestions = document.getElementById("lengthQuestions");
   lengthQuestions.innerHTML = questions.length;
-  let showCurrentQuestions = document.getElementById("showCurrentQuestions");
-  showCurrentQuestions.innerHTML = questions[currentQuestion].length;
 }
 
 function showQuestion() {
   let question = questions[currentQuestion];
+  document.getElementById("question-number").innerHTML = currentQuestion + 1;
   document.getElementById("questionText").innerHTML = question["question"];
   document.getElementById("answer_1").innerHTML = question["answer_1"];
   document.getElementById("answer_2").innerHTML = question["answer_2"];
