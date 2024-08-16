@@ -43,15 +43,22 @@
           <img src="adds/img/logo 2.png" class="card-img-top" alt="..." />
         </div>
 
-        <div class="card-body" id="endScreen" style="display: none;">
-          Quiz beendet!
+        <div class="card-body endcard" id="endScreen" style="display: none">
+          <div class="winnig-contaier">
+            <img style="height: 60%" src="adds/img/Group 5.png" alt="" />
+            Quiz beendet!
+            <div>Du hast <b id="lengthQuestionsRight">xxx</b> von <b id="lengthQuestionsEnd">xxx</b> richtig beantwortet!</div>
+          </div>
         </div>
 
         <div class="card-body" id="questionBody">
-
           <h5 class="card-title rubik-Cards-Title" id="questionText"></h5>
 
-          <div id="button" class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+          <div
+            id="button"
+            class="card quiz-answer-card mb-2"
+            onclick="answer('answer_1')"
+          >
             <div class="card-body rubik-Questions" id="answer_1">Antwort</div>
           </div>
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
@@ -67,8 +74,18 @@
           </div>
 
           <div class="question-Footer">
-            <span> <b id="question-number"></b> von <b id="lengthQuestions"></b> Fragen </span>
-            <button onclick="nextQuestion()" id="next-button" class="btn btn-primary" disabled>Nächste Frage</button>
+            <span>
+              <b id="question-number"></b> von
+              <b id="lengthQuestions"></b> Fragen
+            </span>
+            <button
+              onclick="nextQuestion()"
+              id="next-button"
+              class="btn btn-primary"
+              disabled
+            >
+              Nächste Frage
+            </button>
           </div>
         </div>
       </div>

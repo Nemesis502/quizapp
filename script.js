@@ -1,4 +1,5 @@
 let currentQuestion = 0;
+let rightQuestions = 0;
 
 function render() {
   showCurrentQuestionLength();
@@ -12,9 +13,10 @@ function showCurrentQuestionLength() {
 
 function showQuestion() {
   if (currentQuestion >= questions.length) {
-    //TODO: Show End Screen
+    showlengthQuestionsEndAndRight()
     document.getElementById("endScreen").style = '';
     document.getElementById("questionBody").style = 'display: none';
+    
   } else {
     let question = questions[currentQuestion];
     document.getElementById("question-number").innerHTML = currentQuestion + 1;
@@ -40,6 +42,7 @@ function answer(selcction) {
     //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
     // console.log("Richtige Antwort!");
     document.getElementById(selcction).parentNode.classList.add("bg-success");
+    rightQuestions++;
   } else {
     // console.log("Falsche Antwort");
     document.getElementById(selcction).parentNode.classList.add("bg-danger");
@@ -65,4 +68,11 @@ function resetAnswerButton() {
   document.getElementById("answer_3").parentNode.classList.remove("bg-success");
   document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
+}
+
+function showlengthQuestionsEndAndRight(){
+  let lengthQuestionsEnd = document.getElementById("lengthQuestionsEnd");
+  lengthQuestionsEnd.innerHTML = questions.length;
+  let lengthQuestionsRight = document.getElementById("lengthQuestionsRight");
+  lengthQuestionsRight.innerHTML = rightQuestions;
 }

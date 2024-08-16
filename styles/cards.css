@@ -3,16 +3,8 @@
 
  */
 
-.cardsContainer {
-  background-color: #fefaef;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .quiz-card {
-  width: 30rem;
+  width: 36rem;
 }
 
 .card {
@@ -26,6 +18,7 @@
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 15%;
 }
 
 .rubik-Cards-Title {
@@ -51,3 +44,22 @@
 .bg-danger {
   color: white;
 }
+
+.endcard {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-left: 30px;
+  flex-direction: column;
+}
+
+.winnig-contaier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background-color: #F7D5BB;
+  width: 80%;
+  border-radius: 50%;
+}
+
