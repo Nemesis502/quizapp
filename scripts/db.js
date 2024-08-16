@@ -7,21 +7,21 @@ let questions = [
         "answer_4": "Justin Bieber",
         "right_answer": 2
     },
-     {
-         "question": "Was ist die richtige Syntax, um eine Funktion in JavaScript zu definieren?",
-         "answer_1": "function: meineFunktion() { }",
-         "answer_2": "def meineFunktion() { }",
-         "answer_3": "function meineFunktion() { }",
-         "answer_4": "func meineFunktion() { }",
-         "right_answer": 3
-     },
-     {
-        "question": "Welches HTML-Tag wird verwendet, um einen Absatz zu erstellen?",
-        "answer_1": "<div>",
-        "answer_2": "<span>",
-        "answer_3": "<p>",
-        "answer_4": "<h1>",
+    {
+        "question": "Was ist die richtige Syntax, um eine Funktion in JavaScript zu definieren?",
+        "answer_1": "function: meineFunktion() { }",
+        "answer_2": "def meineFunktion() { }",
+        "answer_3": "function meineFunktion() { }",
+        "answer_4": "func meineFunktion() { }",
         "right_answer": 3
+    },
+    {
+       "question": "Was bewirkt das onclick-Attribut in einem HTML-Button?",
+       "answer_1": "Es ändert die Farbe des Buttons.",
+       "answer_2": "Es definiert die Größe des Buttons.",
+       "answer_3": "Es fügt eine Funktion hinzu, die ausgeführt wird, wenn der Button angeklickt wird.",
+       "answer_4": "Es versteckt den Button",
+       "right_answer": 3
     },
     {
         "question": "Wie kann man eine Variable in JavaScript deklarieren?",
