@@ -59,7 +59,10 @@
   align-items: center;
   gap: 4px;
   background-color: #F7D5BB;
-  width: 80%;
+  width: 85%;
   border-radius: 50%;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
 }
 

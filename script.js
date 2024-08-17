@@ -13,11 +13,16 @@ function showCurrentQuestionLength() {
 
 function showQuestion() {
   if (currentQuestion >= questions.length) {
-    showlengthQuestionsEndAndRight()
-    document.getElementById("endScreen").style = '';
-    document.getElementById("questionBody").style = 'display: none';
-    
+    showlengthQuestionsEndAndRight();
+    document.getElementById("endScreen").style = "";
+    document.getElementById("questionBody").style = "display: none";
   } else {
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById("progress-bar").innerHTML = `${percent} %`;
+    document.getElementById("progress-bar").style.width = `${percent}%`;
+    console.log("Fortschritt:", percent);
+
     let question = questions[currentQuestion];
     document.getElementById("question-number").innerHTML = currentQuestion + 1;
     document.getElementById("questionText").innerHTML = question["question"];
@@ -70,7 +75,7 @@ function resetAnswerButton() {
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
 }
 
-function showlengthQuestionsEndAndRight(){
+function showlengthQuestionsEndAndRight() {
   let lengthQuestionsEnd = document.getElementById("lengthQuestionsEnd");
   lengthQuestionsEnd.innerHTML = questions.length;
   let lengthQuestionsRight = document.getElementById("lengthQuestionsRight");
