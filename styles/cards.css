@@ -66,3 +66,21 @@
   font-weight: bold;
 }
 
+.winnig-contaier > img{
+  height: 60%;
+}
+
+.winning-text{
+  text-align: center;
+}
+
+@media only screen and (max-width: 426px) {
+  .card-body{
+    padding: 0;
+    width: 300px;
+  }
+  .winnig-contaier > img{
+    height: 38%;
+  }
+}
+

@@ -1,5 +1,7 @@
 let currentQuestion = 0;
 let rightQuestions = 0;
+let audio_Success = new Audio("adds/sounds/correct_answer_sound.mp3");
+let audio_Fail = new Audio("adds/sounds/wrong_answer_sound.mp3");
 
 function render() {
   showCurrentQuestionLength();
@@ -47,6 +49,7 @@ function answer(selcction) {
     //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
     // console.log("Richtige Antwort!");
     document.getElementById(selcction).parentNode.classList.add("bg-success");
+    audio_Success.play()
     rightQuestions++;
   } else {
     // console.log("Falsche Antwort");
@@ -54,6 +57,7 @@ function answer(selcction) {
     document
       .getElementById(idOfRightAnswer)
       .parentNode.classList.add("bg-success");
+      audio_Fail.play()
   }
 }
 
@@ -80,4 +84,12 @@ function showlengthQuestionsEndAndRight() {
   lengthQuestionsEnd.innerHTML = questions.length;
   let lengthQuestionsRight = document.getElementById("lengthQuestionsRight");
   lengthQuestionsRight.innerHTML = rightQuestions;
+}
+
+function restartGame() {
+  currentQuestion = 0;
+  rightQuestions = 0;
+  document.getElementById("endScreen").style = "display: none"; //Endscreen ausblenden
+  document.getElementById("questionBody").style = ""; // Fragen wieder anzeigen
+  render()
 }
