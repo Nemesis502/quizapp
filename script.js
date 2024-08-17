@@ -14,7 +14,7 @@ function showCurrentQuestionLength() {
 }
 
 function showQuestion() {
-  if (currentQuestion >= questions.length) {
+  if (gameIsOver()) {
     showlengthQuestionsEndAndRight();
     document.getElementById("endScreen").style = "";
     document.getElementById("questionBody").style = "display: none";
@@ -24,13 +24,17 @@ function showQuestion() {
   }
 }
 
+function gameIsOver(){
+  return currentQuestion >= questions.length
+}
+
 function answer(selcction) {
   let question = questions[currentQuestion]; // weiß damit welche Frage ansteht
   let selectedQuestionNumber = selcction.slice(-1); // entfernt den letzten Buschstaben aus z.b. "answer_2, in dem Fall die 2". Je nachdem welche Antwort angeklickt wird.
   let idOfRightAnswer = `answer_${question["right_answer"]}`;
   document.getElementById("next-button").disabled = false;
 
-  if (selectedQuestionNumber == question["right_answer"]) {
+  if (rightAnswerSelected(selectedQuestionNumber)) {
     //prüft ob der entfernte Buchstabe mit der richten Antwort übereinstimmt
     document.getElementById(selcction).parentNode.classList.add("bg-success");
     audio_Success.play();
@@ -42,6 +46,10 @@ function answer(selcction) {
       .parentNode.classList.add("bg-success");
     audio_Fail.play();
   }
+}
+
+function rightAnswerSelected(selectedQuestionNumber){
+  return selectedQuestionNumber == question["right_answer"]
 }
 
 function nextQuestion() {
